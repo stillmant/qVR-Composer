@@ -1,18 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class QSphereController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private BasisState basisStatePrefab;
+    private List<BasisState> basisStates = new List<BasisState>();
+
+    private void Start()
     {
-        
+        AddBasisState();
+        AddBasisState();
+        basisStates[0].SetToOneState();
+        basisStates[1].SetToZeroState();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddBasisState()
     {
-        
+        var newBasisState = Instantiate(basisStatePrefab, gameObject.transform);
+        basisStates.Add(newBasisState);
     }
 }

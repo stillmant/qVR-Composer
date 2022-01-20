@@ -10,13 +10,12 @@ public class BasisState : MonoBehaviour
 
     private Vector3 zeroState = Vector3.zero;
     private Vector3 oneState = new Vector3(180, 0, 0);
-    
+
     public void SetRotation(Vector3 newRotation)
     {
-        var transformRotation = gameObject.transform.rotation;
-        transformRotation.eulerAngles = newRotation;
+        gameObject.transform.Rotate(newRotation);
     }
-    
+
     public void ChangeColor(Color newColor)
     {
         stickRenderer.material.color = newColor;
