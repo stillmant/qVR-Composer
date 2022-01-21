@@ -47,6 +47,7 @@ MonoBehaviour:
   stickRenderer: {fileID: 8359326762641996993}
   sphereRenderer: {fileID: 2998319005632279301}
   probabilitySphere: {fileID: 7822535556583412781}
+  basisLabel: {fileID: 5291105378849622531}
 --- !u!1001 &5301623732229645929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -124,3 +125,14 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 6921766056001770860, guid: 82855908820c52347a934307feec33d7, type: 3}
   m_PrefabInstance: {fileID: 5301623732229645929}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5291105378849622531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 71757423121640554, guid: 82855908820c52347a934307feec33d7, type: 3}
+  m_PrefabInstance: {fileID: 5301623732229645929}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
