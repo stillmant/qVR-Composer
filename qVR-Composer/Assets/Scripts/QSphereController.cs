@@ -11,14 +11,17 @@ public class QSphereController : MonoBehaviour
     private void Start()
     {
         AddBasisState();
-        AddBasisState();
-        basisStates[0].SetToOneState();
-        basisStates[1].SetToZeroState();
+        basisStates[0].SetToZeroState();
     }
 
     public void AddBasisState()
     {
         var newBasisState = Instantiate(basisStatePrefab, gameObject.transform);
         basisStates.Add(newBasisState);
+    }
+
+    public List<BasisState> GetBasisStates()
+    {
+        return basisStates;
     }
 }

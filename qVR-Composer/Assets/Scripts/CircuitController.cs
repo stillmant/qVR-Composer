@@ -1,18 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CircuitController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private QSphereController qSphereController;
+    [SerializeField] private SnapZone snapZone;
+
+    private bool stateChanged;
+
+    private void Update()
     {
-        
+        if (!snapZone.hasGate) return;
+        ChangeState();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ChangeState()
     {
-        
+        if (stateChanged) return;
+        qSphereController.GetBasisStates()[0].SetToOneState();
+        stateChanged = true;
     }
 }

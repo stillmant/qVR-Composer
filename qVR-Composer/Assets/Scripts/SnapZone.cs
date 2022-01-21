@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SnapZone : MonoBehaviour
 {
+    public bool hasGate;
+    
     private GameObject thisSnapZoneObj;
     private GateCube gateRef;
     private Rigidbody gateRigidbody;
@@ -25,18 +27,7 @@ public class SnapZone : MonoBehaviour
             gateRigidbody.isKinematic = true;
             otherTransform.position = thisSnapZoneObj.transform.position;
             otherTransform.rotation = thisSnapZoneObj.transform.rotation;
+            hasGate = true;
         }
     }
-
-    /*private void OnTriggerStay(Collider other)
-    {
-        if (!gateRef.IsGrabbed())
-        {
-            var otherTransform = other.transform;
-            gateRigidbody.isKinematic = true;
-            otherTransform.position = thisSnapZoneObj.transform.position;
-            otherTransform.rotation = thisSnapZoneObj.transform.rotation;
-        }
-    }*/
-    
 }
