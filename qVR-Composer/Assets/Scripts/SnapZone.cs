@@ -18,6 +18,7 @@ public class SnapZone : MonoBehaviour
 
     private void Update()
     {
+        if (gateRef == null) return;
         if (!gateRef.IsGrabbed())
         {
             var otherTransform = gateRef.transform;
